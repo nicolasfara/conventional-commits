@@ -2,6 +2,8 @@ package it.nicolasfarabegoli.gradle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import java.io.File
+import java.text.MessageFormat
 
 /**
  * Plugin for checking if commits are _Conventional Commits_ compliant.
@@ -16,7 +18,14 @@ class ConventionalCommits : Plugin<Project> {
     }
 
     override fun apply(project: Project) {
-        project.createExtension<ConventionalCommitsExtension>("conventionalCommits", project)
-        project.logger.debug("Create the file '.git/commit-msg' with default rules")
+        val extension = project.createExtension<ConventionalCommitsExtension>("conventionalCommits", project)
+        val regex = buildRegex(extension.scopes.get())
+        project.logger.debug("Use the following regex for check commits: $regex")
+
+        val scriptPath = File(project.rootDir.path + File.separator + ".git" + File.separator, "hooks")
+        if (!scriptPath.exists()) scriptPath.mkdirs()
+        val scriptContent = MessageFormat.format(scriptContent, regex)
+        project.logger.debug("script content: $scriptContent")
+        scriptPath.resolve("commit-msg").writeText(scriptContent)
     }
 }
