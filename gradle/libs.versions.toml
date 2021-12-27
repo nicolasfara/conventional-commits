@@ -1,0 +1,22 @@
+[versions]
+dokka = "1.6.0"
+kotlin = "1.6.10"
+kotest = "5.0.0.M3"
+ktlint = "10.2.0"
+detekt = "1.19.0"
+
+[libraries]
+kotest-junit = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotest-assertions-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
+#detekt = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+
+[bundles]
+kotest = ["kotest-junit", "kotest-assertions-jvm"]
+
+[plugins]
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+publish = { id = "com.gradle.plugin-publish", version = "0.18.0" }
+publish-central = { id = "it.nicolasfarabegoli.publish-to-maven-central", version = "1.0.4" }
