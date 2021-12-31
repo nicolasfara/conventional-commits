@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.ktlint)
     alias(libs.plugins.publish.central)
     alias(libs.plugins.publish)
+    alias(libs.plugins.conventional.commits)
 }
 
 group = "it.nicolasfarabegoli"
