@@ -26,6 +26,8 @@ class ConventionalCommits : Plugin<Project> {
         if (!scriptPath.exists()) scriptPath.mkdirs()
         val scriptContent = MessageFormat.format(scriptContent, regex)
         project.logger.debug("script content: $scriptContent")
-        scriptPath.resolve("commit-msg").writeText(scriptContent)
+        val scriptFile = scriptPath.resolve("commit-msg")
+        scriptFile.writeText(scriptContent)
+        scriptFile.setExecutable(true)
     }
 }
