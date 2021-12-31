@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/nicolasfara/conventional-commits/compare/1.0.0...1.0.1) (2021-12-31)
+
+
+### Bug Fixes
+
+* add executable permission to check script ([c2e2796](https://github.com/nicolasfara/conventional-commits/commit/c2e279628e389d4c06ced6d55721c9d5ba535336))
+
 # 1.0.0 (2021-12-27)
 
 
