@@ -4,6 +4,9 @@ import org.gradle.api.Project
 import org.gradle.api.provider.ListProperty
 import org.gradle.kotlin.dsl.listProperty
 
+/**
+ * Extension configuration.
+ */
 open class ConventionalCommitsExtension(project: Project) {
 
     /**

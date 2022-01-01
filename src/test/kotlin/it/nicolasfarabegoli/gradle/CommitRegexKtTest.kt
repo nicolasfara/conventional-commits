@@ -3,6 +3,9 @@ package it.nicolasfarabegoli.gradle
 import io.kotest.core.spec.style.WordSpec
 import io.kotest.matchers.shouldBe
 
+/**
+ * Test class for regex utility.
+ */
 class CommitRegexKtTest : WordSpec({
     "A commit message" should {
         "admit any scope if no scopes are given" {
