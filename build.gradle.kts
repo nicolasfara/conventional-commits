@@ -84,3 +84,7 @@ publishOnMavenCentral {
         }
     }
 }
+
+detekt {
+    config = files("./detekt.yml")
+}
