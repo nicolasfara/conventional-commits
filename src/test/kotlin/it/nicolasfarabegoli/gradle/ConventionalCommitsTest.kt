@@ -6,6 +6,9 @@ import org.gradle.testkit.runner.GradleRunner
 import org.gradle.testkit.runner.TaskOutcome
 import java.io.File
 
+/**
+ * Test class for the plugin.
+ */
 class ConventionalCommitsTest : WordSpec({
     val projectDir = File("build/gradleTest")
     fun setupTest() {

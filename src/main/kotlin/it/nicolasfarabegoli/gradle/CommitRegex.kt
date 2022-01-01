@@ -2,7 +2,7 @@ package it.nicolasfarabegoli.gradle
 
 private val types = listOf("build", "chore", "ci", "docs", "feat", "fix", "perf", "refactor", "revert", "style", "test")
 
-fun buildRegex(listOfScopes: List<String> = emptyList()): Regex {
+internal fun buildRegex(listOfScopes: List<String> = emptyList()): Regex {
     return if (listOfScopes.isEmpty()) {
         "^(${types.joinToString("|")})(\\([a-z \\-]+\\))?!?: .+\$".toRegex()
     } else {
@@ -10,7 +10,7 @@ fun buildRegex(listOfScopes: List<String> = emptyList()): Regex {
     }
 }
 
-val scriptContent = """
+internal val scriptContent = """
     #!/usr/bin/env bash
 
     # Create a regex for a conventional commit.
