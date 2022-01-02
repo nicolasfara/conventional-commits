@@ -8,7 +8,7 @@ import java.text.MessageFormat
 /**
  * Plugin for checking if commits are _Conventional Commits_ compliant.
  * This plugin can be customized base on the need of the user.
- * See [ConventionalCommitsExtension] for alla available config.
+ * See [ConventionalCommitsExtension] for all available config.
  * For more info on _Conventional Commits_ see [link](https://www.conventionalcommits.org/en/v1.0.0/).
  */
 class ConventionalCommits : Plugin<Project> {
