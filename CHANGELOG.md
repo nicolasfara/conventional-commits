@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/nicolasfara/conventional-commits/compare/1.0.1...1.0.2) (2022-02-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency gradle to v7.4 ([c18c356](https://github.com/nicolasfara/conventional-commits/commit/c18c35648420ad00c7650ee53486ada13fee1335))
+
 ## [1.0.1](https://github.com/nicolasfara/conventional-commits/compare/1.0.0...1.0.1) (2021-12-31)
 
 
