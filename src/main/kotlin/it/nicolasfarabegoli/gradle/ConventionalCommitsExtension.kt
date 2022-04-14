@@ -23,19 +23,34 @@ open class ConventionalCommitsExtension(private val project: Project) {
 
     private var script: String? = null
 
+    /**
+     * Path where the script is write.
+     * By default a git root is searched and if found is used to put the script in `.git/hooks/commit-msg`.
+     */
     val scriptPath: File? = null
         get() =
             field ?: requireNotNull(generateSequence(project.projectDir) { it.parentFile }.find { it.isGitFolder() }) {
                 "Unable to find the `.git` folder inside the project from ${project.projectDir.absolutePath}"
             }
 
+    /**
+     * This method enable a user'script definition.
+     * By default the [shebang] is `#!/usr/bin/env bash`. With [scriptProducer] is possible to write the custom script.
+     */
     fun from(shebang: String? = "#!/usr/bin/env bash", scriptProducer: () -> String) {
         val header = shebang?.takeIf { it.isNotBlank() }?.let { "$it\n\n" } ?: ""
         script = header + scriptProducer()
     }
 
+    /**
+     * Generate the script from the given [url].
+     */
     fun from(url: URL): Unit = from("") { url.readText() }
 
+    /**
+     * This method do all the work needed to write the script file.
+     * Unfortunately, due to gradle workflow is the only way to apply the configuration without defining a manual task.
+     */
     fun setupScript() {
         project.logger.debug("")
         val content = script ?: defaultScript()
