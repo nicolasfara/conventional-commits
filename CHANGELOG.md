@@ -1,3 +1,5 @@
+# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-14)
+
 ## [1.0.3](https://github.com/nicolasfara/conventional-commits/compare/1.0.2...1.0.3) (2022-03-10)
 
 
