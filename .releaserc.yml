@@ -16,3 +16,5 @@ plugins:
         git push --force origin ${nextRelease.version}
         ./gradlew releaseKotlin || exit 1
   - "@semantic-release/github"
+analyzeCommits:
+  - path: "semantic-release-conventional-commits"
