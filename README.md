@@ -12,11 +12,46 @@ plugins {
 
 ### Configuration
 
-By default, no configuration is needed and the behaviour is that all scopes are allowed.  
-For customizing the scopes, a list of String should be given, for example:
+By default, no configuration is needed and a default script is generated.  
+For custom script, you could use mainly two method:
+
+Provide the script directly:
 
 ```kotlin
 conventionalCommits {
-    scopes.set(listOf("scope1", "scope2", "scope3"))
+    from {
+        "echo 'hello world'"
+    }
+    setupScript() //this is needed (at the very bottom) because of gradle :(
 }
+```
+
+Or give a URL pointing to a script:
+
+```kotlin
+conventionalCommits {
+    from(URL("https://example.com/commit-msg.sh"))
+    
+    setupScript() //this is needed (at the very bottom) because of gradle :(
+}
+```
+
+By default the first argument of the method `from` use the following shebang line: `#!/usr/bin/env bash`.
+That shebang line could be overwrite passing the desired one, for example:
+
+```kotlin
+conventionalCommits {
+    from("#!/bin/zsh") {
+        "echo 'hello world'"
+    }
+    
+    setupScript()
+}
+```
+the previous configuration produce the following script:
+
+```shell
+#!/bin/zsh
+
+echo 'hello world'
 ```
