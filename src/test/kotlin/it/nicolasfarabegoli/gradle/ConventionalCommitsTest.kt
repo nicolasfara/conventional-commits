@@ -13,6 +13,7 @@ class ConventionalCommitsTest : WordSpec({
     val projectDir = File("build/gradleTest")
     fun setupDefaultTest() {
         projectDir.mkdirs()
+        File(projectDir.absolutePath, ".git/hooks").mkdirs()
         projectDir.resolve("settings.gradle.kts").writeText("")
         projectDir.resolve("build.gradle.kts").writeText(
             """
@@ -24,6 +25,7 @@ class ConventionalCommitsTest : WordSpec({
     }
     fun setupCustomTest() {
         projectDir.mkdirs()
+        File(projectDir.absolutePath, ".git/hooks").mkdirs()
         projectDir.resolve("settings.gradle.kts").writeText("")
         projectDir.resolve("build.gradle.kts").writeText(
             """
