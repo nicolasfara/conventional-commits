@@ -1,5 +1,7 @@
 # [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-15)
 
+# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-15)
+
 # [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-14)
 
 # [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-14)
