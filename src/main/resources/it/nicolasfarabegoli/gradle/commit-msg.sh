@@ -9,7 +9,6 @@ commit_message=$(cat "$1")
 
 # Check the message, if we match, all good baby.
 if [[ "$commit_message" =~ $conventional_commit_regex ]]; then
-   echo -e "\e[32mCommit message meets Conventional Commit standards...\e[0m"
    exit 0
 fi
 
