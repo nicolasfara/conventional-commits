@@ -13,6 +13,7 @@ plugins {
 ### Configuration
 
 By default, no configuration is needed and a default script is generated.  
+This script is **NOT** comaptible with groovy syntax.  
 For custom script, you could use mainly two method:
 
 Provide the script directly:
