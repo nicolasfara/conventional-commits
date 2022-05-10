@@ -1,3 +1,10 @@
+# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-10)
+
+
+### Bug Fixes
+
+* remove message when commits are compliant ([9544b03](https://github.com/nicolasfara/conventional-commits/commit/9544b035ed0ea8f7a8f0a7effe291bb38198c289))
+
 # [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-04)
 
 # [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-03)
