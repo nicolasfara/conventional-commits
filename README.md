@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/nicolasfara/conventional-commits/actions/workflows/build-release.yml/badge.svg)](https://github.com/nicolasfara/conventional-commits/actions/workflows/build-release.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/it.nicolasfarabegoli/conventional-commits/badge.svg)](https://maven-badges.herokuapp.com/maven-central/it.nicolasfarabegoli/conventional-commits)
-[![semantic-release: conventiona-commits](https://img.shields.io/badge/semantic--release-conventional_commits-e10098?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![semantic-release: conventional-commits](https://img.shields.io/badge/semantic--release-conventional_commits-e10098?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 ## Usage
 ```kotlin
@@ -14,7 +14,7 @@ plugins {
 ### Configuration
 
 By default, no configuration is needed and a default script is generated.  
-This script is **NOT** comaptible with groovy syntax.  
+This script is **NOT** compatible with groovy syntax.  
 For custom script, you could use mainly two method:
 
 Provide the script directly:
@@ -38,8 +38,8 @@ conventionalCommits {
 }
 ```
 
-By default the first argument of the method `from` use the following shebang line: `#!/usr/bin/env bash`.
-That shebang line could be overwrite passing the desired one, for example:
+By default, the first argument of the method `from` use the following shebang line: `#!/usr/bin/env bash`.
+That shebang line could be overwritten passing the desired one, for example:
 
 ```kotlin
 conventionalCommits {
