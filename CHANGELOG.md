@@ -1,63 +1,8 @@
 # [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-06-10)
 
-
 ### Bug Fixes
 
 * remove message when commits are compliant ([9544b03](https://github.com/nicolasfara/conventional-commits/commit/9544b035ed0ea8f7a8f0a7effe291bb38198c289))
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-06-04)
-
-
-### Bug Fixes
-
-* remove message when commits are compliant ([9544b03](https://github.com/nicolasfara/conventional-commits/commit/9544b035ed0ea8f7a8f0a7effe291bb38198c289))
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-27)
-
-
-### Bug Fixes
-
-* remove message when commits are compliant ([9544b03](https://github.com/nicolasfara/conventional-commits/commit/9544b035ed0ea8f7a8f0a7effe291bb38198c289))
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-19)
-
-
-### Bug Fixes
-
-* remove message when commits are compliant ([9544b03](https://github.com/nicolasfara/conventional-commits/commit/9544b035ed0ea8f7a8f0a7effe291bb38198c289))
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-10)
-
-
-### Bug Fixes
-
-* remove message when commits are compliant ([9544b03](https://github.com/nicolasfara/conventional-commits/commit/9544b035ed0ea8f7a8f0a7effe291bb38198c289))
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-04)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-03)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-05-02)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-27)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-26)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-25)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-21)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-20)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-19)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-15)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-15)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-14)
-
-# [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-04-14)
 
 ## [1.0.3](https://github.com/nicolasfara/conventional-commits/compare/1.0.2...1.0.3) (2022-03-10)
 
