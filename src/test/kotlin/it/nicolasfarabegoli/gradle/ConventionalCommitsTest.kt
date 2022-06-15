@@ -51,8 +51,6 @@ class ConventionalCommitsTest : WordSpec({
                         conventionalCommits {
                             scopes = listOf("scope1", "scope2")
                             types += listOf("type1")
-                            
-                            setupScript()
                         }
                     """.trimIndent()
                 }
@@ -69,6 +67,52 @@ class ConventionalCommitsTest : WordSpec({
                 scriptFile.exists() shouldBe true
                 scriptFile.readText() shouldContain "scope1|scope2"
                 scriptFile.readText() shouldContain "type1"
+            }
+        }
+        "not found the .git root" should {
+            "generate a warning (by default) a no script file is created" {
+                val projectDirectory = tempdir()
+                projectDirectory.configureSettingsGradle { "" }
+                projectDirectory.configureBuildGradle {
+                    """
+                        plugins {
+                            id("it.nicolasfarabegoli.conventional-commits")
+                        }
+                    """.trimIndent()
+                }
+
+                val tasks = GradleRunner.create()
+                    .forwardOutput()
+                    .withPluginClasspath()
+                    .withProjectDir(projectDirectory)
+                    .withArguments("tasks")
+                    .build()
+                tasks.task(":tasks")?.outcome shouldBe TaskOutcome.SUCCESS
+                tasks.output.contains("Not '.git' root found! No script will be generated") shouldBe true
+            }
+            "no generate a warning if the warning flag is set to false" {
+                val projectDirectory = tempdir()
+                projectDirectory.configureSettingsGradle { "" }
+                projectDirectory.configureBuildGradle {
+                    """
+                        plugins {
+                            id("it.nicolasfarabegoli.conventional-commits")
+                        }
+                        
+                        conventionalCommits {
+                            warningIfNoGitRoot = false
+                        }
+                    """.trimIndent()
+                }
+
+                val tasks = GradleRunner.create()
+                    .forwardOutput()
+                    .withPluginClasspath()
+                    .withProjectDir(projectDirectory)
+                    .withArguments("tasks")
+                    .build()
+                tasks.task(":tasks")?.outcome shouldBe TaskOutcome.SUCCESS
+                tasks.output.contains("Not '.git' root found! No script will be generated") shouldBe false
             }
         }
     }
