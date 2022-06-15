@@ -17,6 +17,8 @@ class ConventionalCommits : Plugin<Project> {
 
     override fun apply(project: Project) {
         val extension = project.createExtension<ConventionalCommitsExtension>("conventionalCommits", project)
-        extension.setupScript()
+        project.afterEvaluate {
+            extension.setupScript()
+        }
     }
 }
