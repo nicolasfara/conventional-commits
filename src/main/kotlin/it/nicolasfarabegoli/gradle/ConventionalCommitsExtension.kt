@@ -34,7 +34,7 @@ open class ConventionalCommitsExtension(private val project: Project) {
     /**
      * List of admitted scopes.
      *
-     * By default an empty list is set, meaning that all scopes are admitted.
+     * By default, an empty list is set, meaning that all scopes are admitted.
      */
     var scopes: List<String> = emptyList()
 
@@ -55,9 +55,8 @@ open class ConventionalCommitsExtension(private val project: Project) {
 
     /**
      * This method do all the work needed to write the script file.
-     * Unfortunately, due to gradle workflow is the only way to apply the configuration without defining a manual task.
      */
-    fun setupScript() {
+    internal fun setupScript() {
         writeScript(project, project.projectDir, types, scopes, warningIfNoGitRoot, successMessage, failureMessage)
     }
 }
