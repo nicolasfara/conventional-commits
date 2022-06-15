@@ -3,57 +3,58 @@
 [![CI](https://github.com/nicolasfara/conventional-commits/actions/workflows/build-release.yml/badge.svg)](https://github.com/nicolasfara/conventional-commits/actions/workflows/build-release.yml)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/it.nicolasfarabegoli/conventional-commits/badge.svg)](https://maven-badges.herokuapp.com/maven-central/it.nicolasfarabegoli/conventional-commits)
 [![semantic-release: conventional-commits](https://img.shields.io/badge/semantic--release-conventional_commits-e10098?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Usage
+The purpose of this plugin is to enforce the use of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) in a Gradle-based project.
+
+## Setup
 ```kotlin
 plugins {
     id("it.nicolasfarabegoli.conventional-commits") version "<last-version>"
 }
 ```
 
-### Configuration
+Simply applying the plugin as above, a pre-configured script for conventional commit check is generate.
 
-By default, no configuration is needed and a default script is generated.  
-This script is **NOT** compatible with groovy syntax.  
-For custom script, you could use mainly two method:
+The plugin creates a git hooks file that enforce that each commit is compliant with the Conventional Commit convention:
 
-Provide the script directly:
+```bash
+> git commit -m "some message"
+The commit message does not meet the Conventional Commit standard
+An example of a valid message is:
+  feat(login): add the 'remember me' button
+More details at: https://www.conventionalcommits.org/en/v1.0.0/#summary
 
-```kotlin
-conventionalCommits {
-    from {
-        "echo 'hello world'"
-    }
-    setupScript() //this is needed (at the very bottom) because of gradle :(
-}
+> git commit -m "feat: we love conventional commit!"
+Commit message meets Conventional Commit standards...
 ```
 
-Or give a URL pointing to a script:
+All the available plugin's keys are shown below:
 
 ```kotlin
 conventionalCommits {
-    from(URL("https://example.com/commit-msg.sh"))
+    warningIfNoGitRoot = true
     
-    setupScript() //this is needed (at the very bottom) because of gradle :(
-}
-```
-
-By default, the first argument of the method `from` use the following shebang line: `#!/usr/bin/env bash`.
-That shebang line could be overwritten passing the desired one, for example:
-
-```kotlin
-conventionalCommits {
-    from("#!/bin/zsh") {
-        "echo 'hello world'"
-    }
+    types += listOf("types", "type2") // Add those types to the standard ones
     
-    setupScript()
+    scopes = emptyList()
+    
+    successMessage = "Commit message meets Conventional Commit standards..."
+    
+    failureMessage = "The commit message does not meet the Conventional Commit standard"
 }
 ```
-the previous configuration produce the following script:
 
-```shell
-#!/bin/zsh
+The following table describe all the available keys in the plugin
 
-echo 'hello world'
-```
+| Key                  | Description                                                                                                | Default                                                                                      |
+|----------------------|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| `warningIfNoGitRoot` | A **warning** is raised if no `.git` root is found walking up until the `/` from the project folder.       | `true`                                                                                       |
+| `types`              | List of admitted types in the commit message.                                                              | `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test` |
+| `scopes`             | List of admitted scopes in the commit message. An empty list means that all scopes are admitted            | `emptyList`                                                                                  |
+| `successMessage`     | A message printed if the commit meets conventional commit. If `null` is set, no message is printed.        | "Commit message meets Conventional Commit standards..."                                      |
+| `failureMessage`     | A message printed if the commit **not** meets conventional commit. If `null` is set no message is printed. | "The commit message does not meet the Conventional Commit standard"                          |
+
+## Limitations
+
+ - This plugin is available **ONLY** for Gradle project that use the kotlin script DSL
