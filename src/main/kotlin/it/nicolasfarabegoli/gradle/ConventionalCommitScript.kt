@@ -3,7 +3,7 @@ package it.nicolasfarabegoli.gradle
 import org.gradle.api.Project
 import java.io.File
 
-fun writeScript(
+internal fun writeScript(
     project: Project,
     baseDir: File,
     types: List<String>,
@@ -54,9 +54,9 @@ private fun createCommitMessage(
 }
 
 private fun wrapInEcho(str: String?): String = str?.let { s -> "echo -e '${escape(s)}'" } ?: ""
-fun escape(str: String): String = str.replace("\r", "").replace("\n", "\\n").replace("'", "\\'")
+private fun escape(str: String): String = str.replace("\r", "").replace("\n", "\\n").replace("'", "\\'")
 
-fun File.isGitFolder(): Boolean =
+private fun File.isGitFolder(): Boolean =
     listFiles()?.any { folder -> folder.isDirectory && folder.name == ".git" } ?: false
 
 private fun File.writeScript(content: String) {
