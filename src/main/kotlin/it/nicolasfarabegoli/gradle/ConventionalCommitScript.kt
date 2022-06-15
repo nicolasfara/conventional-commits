@@ -16,8 +16,12 @@ internal fun writeScript(
     generateSequence(baseDir) { it.parentFile }.find { it.isGitFolder() }?.let {
         val scriptContent = createCommitMessage(types, scopes, successMessage, failureMessage)
         it.resolve(".git/hooks/commit-msg").writeScript(scriptContent)
+        project.logger.debug("[ConventionalCommits] script file written in '.git/hooks/commit-msg'")
     } ?: run {
-        if (warningIfNoGitRoot) project.logger.warn("Not git root found! No script will be generated")
+        project.logger.debug("[ConventionalCommits] '.git' folder not found. No action taken")
+        if (warningIfNoGitRoot) {
+            project.logger.warn("[ConventionalCommits] Not '.git' root found! No script will be generated")
+        }
     }
 }
 
