@@ -7,6 +7,9 @@ import org.gradle.api.Project
  */
 open class ConventionalCommitsExtension(private val project: Project) {
 
+    /**
+     * If set to _true_ a warning is raised if no _.git_ folder is found.
+     */
     var warningIfNoGitRoot: Boolean = true
 
     /**
