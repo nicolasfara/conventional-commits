@@ -1,3 +1,12 @@
+# [3.0.0](https://github.com/nicolasfara/conventional-commits/compare/2.0.0...3.0.0) (2022-06-15)
+
+
+### Bug Fixes
+
+* change functions visibility ([ebf49c2](https://github.com/nicolasfara/conventional-commits/commit/ebf49c2dc826f9d5b079e2e16c7ee174cbcfbd09))
+* mark as internal the setupScript() method because of the removal of the Gradle limitation ([5b04ed6](https://github.com/nicolasfara/conventional-commits/commit/5b04ed6b9c5c54163f51dca7aff9e906a8e4ed69))
+* remove gradle limitation which forced the use of the setupScript() method ([f51b06b](https://github.com/nicolasfara/conventional-commits/commit/f51b06b4b3a8b8c0b140dd251129226600e7ab34))
+
 # [2.0.0](https://github.com/nicolasfara/conventional-commits/compare/1.0.3...2.0.0) (2022-06-10)
 
 ### Bug Fixes
