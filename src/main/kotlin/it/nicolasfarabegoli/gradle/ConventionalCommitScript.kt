@@ -57,8 +57,16 @@ private fun createCommitMessage(
     """.trimIndent()
 }
 
-private fun wrapInEcho(str: String?): String = str?.let { s -> "echo -e '${escape(s)}'" } ?: ""
-private fun escape(str: String): String = str.replace("\r", "").replace("\n", "\\n").replace("'", "\\'")
+private fun wrapInEcho(str: String?): String = str?.let { s -> "echo -e '${sanitize(s)}'" } ?: ""
+private fun sanitize(str: String): String {
+    val charsToEscape = listOf('\'')
+    val escaped = escapeNewlines(str)
+    return escapeChars(escaped, charsToEscape)
+}
+
+private fun escapeChar(c: Char, str: String): String = str.replace(c.toString(), "\\x%x".format(c.code))
+private fun escapeChars(str: String, cs: List<Char>): String = cs.foldRight(str, ::escapeChar)
+private fun escapeNewlines(str: String): String = str.replace("\r", "").replace("\n", "\\n").replace("'", "\\'")
 
 private fun File.isGitFolder(): Boolean =
     listFiles()?.any { folder -> folder.isDirectory && folder.name == ".git" } ?: false

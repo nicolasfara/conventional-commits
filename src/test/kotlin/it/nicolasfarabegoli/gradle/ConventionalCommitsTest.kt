@@ -34,6 +34,11 @@ class ConventionalCommitsTest : WordSpec({
                 tasks.task(":tasks")?.outcome shouldBe TaskOutcome.SUCCESS
 
                 projectDirectory.resolve(".git/hooks/commit-msg").exists() shouldBe true
+                projectDirectory.resolve(".git/hooks/commit-msg")
+                    .readText() shouldContain "\\e[32mCommit message meets Conventional Commit standards...\\e[0m"
+                // Test if `'` character is correctly escaped into `\x27`
+                projectDirectory.resolve(".git/hooks/commit-msg")
+                    .readText() shouldContain "feat(login): add the \\\\x27remember me\\\\x27 button"
             }
         }
 
