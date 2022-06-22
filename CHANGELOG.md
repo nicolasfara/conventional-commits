@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/nicolasfara/conventional-commits/compare/3.0.0...3.0.1) (2022-06-22)
+
+
+### Bug Fixes
+
+* improve characters escaping in success and error message ([833dc17](https://github.com/nicolasfara/conventional-commits/commit/833dc1783283f3b26f1167c8e814067164a6bf77))
+
 # [3.0.0](https://github.com/nicolasfara/conventional-commits/compare/2.0.0...3.0.0) (2022-06-15)
 
 
