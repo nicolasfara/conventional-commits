@@ -1,7 +1,7 @@
 [versions]
 dokka = "1.7.0"
 kotlin = "1.7.0"
-kotest = "5.3.0"
+kotest = "5.3.2"
 ktlint = "10.3.0"
 detekt = "1.20.0"
 
