@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/nicolasfara/conventional-commits/compare/3.0.2...3.0.3) (2022-08-05)
+
+
+### Bug Fixes
+
+* end quote for commits regex ([5ce0cd3](https://github.com/nicolasfara/conventional-commits/commit/5ce0cd3d2106e66dc15b323348883ff8b50908cf))
+
 ## [3.0.2](https://github.com/nicolasfara/conventional-commits/compare/3.0.1...3.0.2) (2022-07-28)
 
 
