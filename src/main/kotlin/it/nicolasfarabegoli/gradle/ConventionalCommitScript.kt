@@ -10,7 +10,7 @@ internal fun writeScript(
     scopes: List<String>,
     warningIfNoGitRoot: Boolean,
     successMessage: String?,
-    failureMessage: String?,
+    failureMessage: String?
 ) {
     project.logger.debug("Finding the '.git' folder")
     generateSequence(baseDir) { it.parentFile }.find { it.isGitFolder() }?.let {
@@ -29,7 +29,7 @@ private fun createCommitMessage(
     types: List<String>,
     scopes: List<String>,
     successMessage: String?,
-    failureMessage: String?,
+    failureMessage: String?
 ): String {
     val typesRegex = types.joinToString("|")
     val scopesRegex = if (scopes.isEmpty()) "[a-z \\-]+" else scopes.joinToString("|")
@@ -46,7 +46,7 @@ private fun createCommitMessage(
         commit_message=$(cat "$1")
         
         # Check the message, if we match, all good baby.
-        if [[ "${'$'}commit_message" =~ ${'$'}conventional_commit_regex ]]; then
+        if [[ "${'$'}commit_message" =~ ${'$'}conventional_commits_regex ]]; then
            $successMessageEcho
            exit 0
         fi
