@@ -1,3 +1,10 @@
+## [3.0.4](https://github.com/nicolasfara/conventional-commits/compare/3.0.3...3.0.4) (2022-08-06)
+
+
+### Bug Fixes
+
+* fix typo in variable' script, closes [#82](https://github.com/nicolasfara/conventional-commits/issues/82) ([2108992](https://github.com/nicolasfara/conventional-commits/commit/21089926e5cee8dadf58c1e4fb33852a41921faa))
+
 ## [3.0.3](https://github.com/nicolasfara/conventional-commits/compare/3.0.2...3.0.3) (2022-08-05)
 
 
