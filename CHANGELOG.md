@@ -1,3 +1,10 @@
+## [3.0.5](https://github.com/nicolasfara/conventional-commits/compare/3.0.4...3.0.5) (2022-08-10)
+
+
+### Bug Fixes
+
+* **deps:** update kotest to v5.4.2 ([5753ec7](https://github.com/nicolasfara/conventional-commits/commit/5753ec74d62c042f9287774b9f603485b37e2f0c))
+
 ## [3.0.4](https://github.com/nicolasfara/conventional-commits/compare/3.0.3...3.0.4) (2022-08-06)
 
 
