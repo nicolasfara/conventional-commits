@@ -1,3 +1,10 @@
+## [3.0.6](https://github.com/nicolasfara/conventional-commits/compare/3.0.5...3.0.6) (2022-08-19)
+
+
+### Bug Fixes
+
+* **regex:** escape the closed bracket, closes [#85](https://github.com/nicolasfara/conventional-commits/issues/85) ([81fe4c6](https://github.com/nicolasfara/conventional-commits/commit/81fe4c6dd16cb8ba17a93e475ce19e5b88550660))
+
 ## [3.0.5](https://github.com/nicolasfara/conventional-commits/compare/3.0.4...3.0.5) (2022-08-10)
 
 
