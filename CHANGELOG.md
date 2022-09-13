@@ -1,3 +1,10 @@
+## [3.0.7](https://github.com/nicolasfara/conventional-commits/compare/3.0.6...3.0.7) (2022-09-13)
+
+
+### Bug Fixes
+
+* **regex:** remove uneeded escape characters ([40935dc](https://github.com/nicolasfara/conventional-commits/commit/40935dc89dc979b21fed961065c39b07c83477c1))
+
 ## [3.0.6](https://github.com/nicolasfara/conventional-commits/compare/3.0.5...3.0.6) (2022-08-19)
 
 
