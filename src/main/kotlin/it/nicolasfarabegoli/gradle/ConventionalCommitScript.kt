@@ -39,7 +39,7 @@ private fun createCommitMessage(
         #!/usr/bin/env bash
         
         # Regex for conventional commits
-        conventional_commits_regex="^($typesRegex)(\\($scopesRegex\\))?!?: .+$"
+        conventional_commits_regex="^($typesRegex)(\($scopesRegex\))?\!?:\ .+$"
         
         # Get the commit message (the parameter we're given is just the path to the
         # temporary file which holds the message).
