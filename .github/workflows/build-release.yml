@@ -27,7 +27,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Fetch sources
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3.1.0
 
       - name: Setup Java
         uses: actions/setup-java@v3.5.1
@@ -45,7 +45,7 @@ jobs:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     steps:
       - name: Fetch sources
-        uses: actions/checkout@v3.0.2
+        uses: actions/checkout@v3.1.0
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
 
