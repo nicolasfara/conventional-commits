@@ -1,3 +1,10 @@
+## [3.0.10](https://github.com/nicolasfara/conventional-commits/compare/3.0.9...3.0.10) (2022-10-08)
+
+
+### Bug Fixes
+
+* change java version to 1.8 ([37ac279](https://github.com/nicolasfara/conventional-commits/commit/37ac2799be0f87e0b114e407285e0616b09ee75d))
+
 ## [3.0.9](https://github.com/nicolasfara/conventional-commits/compare/3.0.8...3.0.9) (2022-10-03)
 
 
