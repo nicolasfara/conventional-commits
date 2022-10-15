@@ -11,7 +11,7 @@ plugins {
     alias(libs.plugins.ktlint)
     alias(libs.plugins.publish.central)
     alias(libs.plugins.publish)
-    // alias(libs.plugins.conventional.commits) TODO("remove after publishing for java 8 as target")
+    alias(libs.plugins.conventional.commits)
 }
 
 group = "it.nicolasfarabegoli"
