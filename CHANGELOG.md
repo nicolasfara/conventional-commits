@@ -1,3 +1,10 @@
+## [3.0.12](https://github.com/nicolasfara/conventional-commits/compare/3.0.11...3.0.12) (2022-10-15)
+
+
+### Bug Fixes
+
+* **java-version:** add java 8 compatibility ([c0c28dd](https://github.com/nicolasfara/conventional-commits/commit/c0c28ddc56abbafca82d01103d45c808f3ef09e3))
+
 ## [3.0.11](https://github.com/nicolasfara/conventional-commits/compare/3.0.10...3.0.11) (2022-10-09)
 
 
