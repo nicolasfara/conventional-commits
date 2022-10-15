@@ -11,7 +11,7 @@ plugins {
     alias(libs.plugins.ktlint)
     alias(libs.plugins.publish.central)
     alias(libs.plugins.publish)
-    alias(libs.plugins.conventional.commits)
+    // alias(libs.plugins.conventional.commits) TODO("remove after publishing for java 8 as target")
 }
 
 group = "it.nicolasfarabegoli"
@@ -24,6 +24,10 @@ val pluginImplementationClass = "it.nicolasfarabegoli.gradle.ConventionalCommits
 repositories {
     mavenCentral()
     gradlePluginPortal()
+}
+
+java {
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 dependencies {
