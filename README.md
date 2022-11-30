@@ -54,7 +54,3 @@ The following table describe all the available keys in the plugin
 | `scopes`             | List of admitted scopes in the commit message. An empty list means that all scopes are admitted            | `emptyList`                                                                                  |
 | `successMessage`     | A message printed if the commit meets conventional commit. If `null` is set, no message is printed.        | "Commit message meets Conventional Commit standards..."                                      |
 | `failureMessage`     | A message printed if the commit **not** meets conventional commit. If `null` is set no message is printed. | "The commit message does not meet the Conventional Commit standard"                          |
-
-## Limitations
-
- - This plugin is available **ONLY** for Gradle project that use the kotlin script DSL
