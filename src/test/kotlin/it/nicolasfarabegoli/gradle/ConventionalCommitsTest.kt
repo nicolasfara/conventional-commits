@@ -119,6 +119,33 @@ class ConventionalCommitsTest : WordSpec({
                 tasks.task(":tasks")?.outcome shouldBe TaskOutcome.SUCCESS
                 tasks.output.contains("Not '.git' root found! No script will be generated") shouldBe false
             }
+            "ignore the messages that match the given regex" {
+                val projectDirectory = tempdir()
+                projectDirectory.resolve(".git/hooks").mkdirs()
+                projectDirectory.configureSettingsGradle { "" }
+                projectDirectory.configureBuildGradle {
+                    """
+                        plugins {
+                            id("it.nicolasfarabegoli.conventional-commits")
+                        }
+                        
+                        conventionalCommits {
+                            ignoreCommitMessage = "^Merge .+$"
+                        }
+                    """.trimIndent()
+                }
+
+                val tasks = GradleRunner.create()
+                    .forwardOutput()
+                    .withPluginClasspath()
+                    .withProjectDir(projectDirectory)
+                    .withArguments("tasks")
+                    .build()
+                tasks.task(":tasks")?.outcome shouldBe TaskOutcome.SUCCESS
+                val scriptContent = projectDirectory.resolve(".git/hooks/commit-msg").readText()
+                println(scriptContent)
+                scriptContent shouldContain "^Merge .+\$"
+            }
         }
     }
 })

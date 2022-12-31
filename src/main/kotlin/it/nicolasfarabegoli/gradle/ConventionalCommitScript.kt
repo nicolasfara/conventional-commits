@@ -10,11 +10,12 @@ internal fun writeScript(
     scopes: List<String>,
     warningIfNoGitRoot: Boolean,
     successMessage: String?,
-    failureMessage: String?
+    failureMessage: String?,
+    ignoreMessageCommit: String
 ) {
     project.logger.debug("Finding the '.git' folder")
     generateSequence(baseDir) { it.parentFile }.find { it.isGitFolder() }?.let {
-        val scriptContent = createCommitMessage(types, scopes, successMessage, failureMessage)
+        val scriptContent = createCommitMessage(types, scopes, successMessage, failureMessage, ignoreMessageCommit)
         it.resolve(".git/hooks/commit-msg").writeScript(scriptContent)
         project.logger.debug("[ConventionalCommits] script file written in '.git/hooks/commit-msg'")
     } ?: run {
@@ -29,7 +30,8 @@ private fun createCommitMessage(
     types: List<String>,
     scopes: List<String>,
     successMessage: String?,
-    failureMessage: String?
+    failureMessage: String?,
+    ignoreMessageCommit: String
 ): String {
     val typesRegex = types.joinToString("|")
     val scopesRegex = if (scopes.isEmpty()) "[a-z \\-]+" else scopes.joinToString("|")
@@ -41,9 +43,18 @@ private fun createCommitMessage(
         # Regex for conventional commits
         conventional_commits_regex="^($typesRegex)(\(($scopesRegex)\))?\!?:\ .+$"
         
+        # Regex used to exclude message commit that match this regex
+        exclude="$ignoreMessageCommit"
+        
         # Get the commit message (the parameter we're given is just the path to the
         # temporary file which holds the message).
         commit_message=$(cat "$1")
+        
+        # Check if the message math the exclude regex, if so, all good baby.
+        if [[ "${'$'}commit_message" =~ ${'$'}exclude ]]; then
+            $successMessageEcho
+            exit 0
+        fi
         
         # Check the message, if we match, all good baby.
         if [[ "${'$'}commit_message" =~ ${'$'}conventional_commits_regex ]]; then

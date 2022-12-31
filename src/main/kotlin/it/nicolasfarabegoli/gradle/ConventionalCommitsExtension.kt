@@ -54,9 +54,23 @@ open class ConventionalCommitsExtension(private val project: Project) {
     """.trimIndent()
 
     /**
+     * If the commit message match the following regex, the message is excluded from the check.
+     */
+    var ignoreCommitMessage: String = ".^"
+
+    /**
      * This method do all the work needed to write the script file.
      */
     internal fun setupScript() {
-        writeScript(project, project.projectDir, types, scopes, warningIfNoGitRoot, successMessage, failureMessage)
+        writeScript(
+            project,
+            project.projectDir,
+            types,
+            scopes,
+            warningIfNoGitRoot,
+            successMessage,
+            failureMessage,
+            ignoreCommitMessage
+        )
     }
 }
