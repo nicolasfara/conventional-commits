@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/nicolasfara/conventional-commits/compare/3.0.14...3.1.0) (2022-12-31)
+
+
+### Features
+
+* add the ability to exclude commit message that match a configured regex. Closes [#130](https://github.com/nicolasfara/conventional-commits/issues/130) ([a822194](https://github.com/nicolasfara/conventional-commits/commit/a8221942e938a6fbaae9f87cec88807c1b1c3294))
+
 ## [3.0.14](https://github.com/nicolasfara/conventional-commits/compare/3.0.13...3.0.14) (2022-11-02)
 
 
