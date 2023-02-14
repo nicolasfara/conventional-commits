@@ -53,13 +53,9 @@ tasks.withType<Test> {
     }
 }
 
-pluginBundle {
-    website = websiteUrl
-    vcsUrl = websiteUrl
-    tags = listOf("conventional-commits")
-}
-
 gradlePlugin {
+    website.set(websiteUrl)
+    vcsUrl.set(websiteUrl)
     plugins {
         create("ConventionalCommits") {
             id = projectId
