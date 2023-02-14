@@ -10,5 +10,4 @@ gradleEnterprise {
     }
 }
 
-enableFeaturePreview("VERSION_CATALOGS")
 rootProject.name = "conventional-commits"
