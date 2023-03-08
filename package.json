@@ -7,6 +7,6 @@
     "gradle-semantic-release-plugin": "1.7.6"
   },
   "engines": {
-    "node": "18.14"
+    "node": "18.15"
   }
 }
