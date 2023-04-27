@@ -16,6 +16,8 @@ internal fun writeScript(
     project.logger.debug("Finding the '.git' folder")
     generateSequence(baseDir) { it.parentFile }.find { it.isGitFolder() }?.let {
         val scriptContent = createCommitMessage(types, scopes, successMessage, failureMessage, ignoreMessageCommit)
+        val hooksFolder = it.resolve(".git/hooks/")
+        if (!hooksFolder.exists()) hooksFolder.mkdir()
         it.resolve(".git/hooks/commit-msg").writeScript(scriptContent)
         project.logger.debug("[ConventionalCommits] script file written in '.git/hooks/commit-msg'")
     } ?: run {

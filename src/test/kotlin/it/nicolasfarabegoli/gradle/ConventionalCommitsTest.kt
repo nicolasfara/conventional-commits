@@ -146,6 +146,33 @@ class ConventionalCommitsTest : WordSpec({
                 println(scriptContent)
                 scriptContent shouldContain "^Merge .+\$"
             }
+            "create the hook file even if the hooks folder do not exist (issue #170)" {
+                val projectDirectory = tempdir()
+                projectDirectory.resolve(".git/").mkdirs()
+                projectDirectory.configureSettingsGradle { "" }
+                projectDirectory.configureBuildGradle {
+                    """
+                        plugins {
+                            id("it.nicolasfarabegoli.conventional-commits")
+                        }
+                    """.trimIndent()
+                }
+
+                val tasks = GradleRunner.create()
+                    .forwardOutput()
+                    .withPluginClasspath()
+                    .withProjectDir(projectDirectory)
+                    .withArguments("tasks")
+                    .build()
+                tasks.task(":tasks")?.outcome shouldBe TaskOutcome.SUCCESS
+
+                projectDirectory.resolve(".git/hooks/commit-msg").exists() shouldBe true
+                projectDirectory.resolve(".git/hooks/commit-msg")
+                    .readText() shouldContain "\\e[32mCommit message meets Conventional Commit standards...\\e[0m"
+                // Test if `'` character is correctly escaped into `\x27`
+                projectDirectory.resolve(".git/hooks/commit-msg")
+                    .readText() shouldContain "feat(login): add the \\\\x27remember me\\\\x27 button"
+            }
         }
     }
 })
