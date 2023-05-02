@@ -20,5 +20,5 @@ detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 publish = { id = "com.gradle.plugin-publish", version = "1.2.0" }
 publishOnCentral = "org.danilopianini.publish-on-central:5.0.5"
 gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning:1.1.9"
-conventional-commits = { id = "it.nicolasfarabegoli.conventional-commits", version = "3.1.0" }
+conventional-commits = { id = "it.nicolasfarabegoli.conventional-commits", version = "3.1.1" }
 taskTree = "com.dorongold.task-tree:2.1.1"
