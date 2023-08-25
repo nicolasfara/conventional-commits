@@ -1,3 +1,58 @@
+## [3.1.2](https://github.com/nicolasfara/conventional-commits/compare/3.1.1...3.1.2) (2023-08-25)
+
+
+### Bug Fixes
+
+* solve a problem with terminal colors in macOS. Closes [#199](https://github.com/nicolasfara/conventional-commits/issues/199) ([e544840](https://github.com/nicolasfara/conventional-commits/commit/e544840c32118ec8bb6069cbe597526d1d3d2179))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.5.3 ([ec1a27c](https://github.com/nicolasfara/conventional-commits/commit/ec1a27ce768bbd559f6d9ad4b212d005e827ae8d))
+* **deps:** update actions/setup-node action to v3.7.0 ([a943d86](https://github.com/nicolasfara/conventional-commits/commit/a943d862693419d8b7e50abdf6d17b265e85695b))
+* **deps:** update actions/setup-node action to v3.8.0 ([e858d35](https://github.com/nicolasfara/conventional-commits/commit/e858d35dc9f6d9d9ff9794cee14648b91419e0a4))
+* **deps:** update actions/setup-node action to v3.8.1 ([db1db0c](https://github.com/nicolasfara/conventional-commits/commit/db1db0c48557823dca45109a7e196668ecd11eaa))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.5 ([a86367a](https://github.com/nicolasfara/conventional-commits/commit/a86367a1339cb7622d7f6e7a6bb01626811cd4c7))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.6 ([168be70](https://github.com/nicolasfara/conventional-commits/commit/168be7096bf0b6793030ae0bb75624bb990bbf66))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.7 ([867a893](https://github.com/nicolasfara/conventional-commits/commit/867a893ee0f86ba8dc11ff7377776bb9e349cf6c))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.8 ([1e7ea8f](https://github.com/nicolasfara/conventional-commits/commit/1e7ea8fa9cec6d70bb220f6bdae3067fcee50ae3))
+
+
+### Dependency updates
+
+* **deps:** update dependency gradle to v8.1.1 ([0dd0c90](https://github.com/nicolasfara/conventional-commits/commit/0dd0c905c2243002157544f980a9590fee44b5d6))
+* **deps:** update dependency gradle to v8.2 ([9fe2b92](https://github.com/nicolasfara/conventional-commits/commit/9fe2b92996ab792e28a1f2945fc44cc1397a626a))
+* **deps:** update dependency gradle to v8.2.1 ([0be6cba](https://github.com/nicolasfara/conventional-commits/commit/0be6cbaad0335ef943ff89b9d7d608f61178f5d1))
+* **deps:** update dependency gradle to v8.3 ([ff15edd](https://github.com/nicolasfara/conventional-commits/commit/ff15eddb68316c2b123769760b3ace4bfab03c4d))
+* **deps:** update dependency io.gitlab.arturbosch.detekt to v1.23.0 ([af6c373](https://github.com/nicolasfara/conventional-commits/commit/af6c3736cb7dbed3179c76cac7f0f6324b8df68b))
+* **deps:** update dependency io.kotest:kotest-runner-junit5 to v5.6.2 ([6b14cf1](https://github.com/nicolasfara/conventional-commits/commit/6b14cf14ec47d41f712fe7ac8a67799e7e7e96e8))
+* **deps:** update dependency org.jetbrains.dokka to v1.8.20 ([44fa7f9](https://github.com/nicolasfara/conventional-commits/commit/44fa7f9a983709cac2564e1dce16094dfc5bb8e1))
+* **deps:** update dependency org.jetbrains.kotlin.jvm to v1.8.21 ([3cb7557](https://github.com/nicolasfara/conventional-commits/commit/3cb75576ba251e09390195d9838faf3dfcc3dc14))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.26 ([789be4b](https://github.com/nicolasfara/conventional-commits/commit/789be4b36942491a77bc45e405f0b917dd6ab5e6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.27 ([d730d48](https://github.com/nicolasfara/conventional-commits/commit/d730d480c847158c6ef095496e37ea9379ea0b87))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.30 ([324d76f](https://github.com/nicolasfara/conventional-commits/commit/324d76fc7ae4888da0c9bd2d34a48ffff88454b7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.32 ([a5a8b8e](https://github.com/nicolasfara/conventional-commits/commit/a5a8b8eb8028ca0823e82c17462163457a678eda))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.33 ([dcff789](https://github.com/nicolasfara/conventional-commits/commit/dcff789580d85d883b5a89b15cddd598f97013a9))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.34 ([e577ea4](https://github.com/nicolasfara/conventional-commits/commit/e577ea4ec44036888c06dc5c55ad1636662d1f31))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.35 ([867179e](https://github.com/nicolasfara/conventional-commits/commit/867179e031836fe75a23d52ba5f7f7439d5a8110))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.37 ([b2a4f55](https://github.com/nicolasfara/conventional-commits/commit/b2a4f55aa5f5b54478fe20763ced1c7d3fabfad6))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.38 ([783d38c](https://github.com/nicolasfara/conventional-commits/commit/783d38ce0c4d73f21f6237724a77b6e787033958))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.39 ([f4a730c](https://github.com/nicolasfara/conventional-commits/commit/f4a730c3aecd9e1fdc0aabba616cb98da64c01eb))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.40 ([6bc8411](https://github.com/nicolasfara/conventional-commits/commit/6bc84113585fe680b26c4fbad6bb190eca1fc52e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.41 ([ac17249](https://github.com/nicolasfara/conventional-commits/commit/ac17249cde49433c8b92ddb9ac710fcd23ea1549))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.42 ([13e6970](https://github.com/nicolasfara/conventional-commits/commit/13e69700690dc4f0fb937239be18fe2e9d5e927a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.43 ([a6f835a](https://github.com/nicolasfara/conventional-commits/commit/a6f835a988b1deb65123f702becb02fb9b965d5c))
+* **deps:** update node.js to 18.17 ([2515ba6](https://github.com/nicolasfara/conventional-commits/commit/2515ba649d9eb8d9f06f709dc5c40cbdf35304db))
+* **deps:** update plugin com.gradle.enterprise to v3.13.1 ([6a64a01](https://github.com/nicolasfara/conventional-commits/commit/6a64a01cf5e21eac01d99ceef95250194906f005))
+* **deps:** update plugin com.gradle.enterprise to v3.13.2 ([bd14e76](https://github.com/nicolasfara/conventional-commits/commit/bd14e761a118e25eb7cba206fede2f5d9c73496b))
+* **deps:** update plugin com.gradle.enterprise to v3.13.3 ([206625f](https://github.com/nicolasfara/conventional-commits/commit/206625f75dcf5eb31892bd8b50cf328c745077b8))
+* **deps:** update plugin com.gradle.enterprise to v3.13.4 ([fe7c318](https://github.com/nicolasfara/conventional-commits/commit/fe7c3188f5f474c404352fe318c6c7960da12316))
+* **deps:** update plugin com.gradle.enterprise to v3.14 ([8b893b3](https://github.com/nicolasfara/conventional-commits/commit/8b893b3bf9ea7e3f8da428b53d461872cb6f9802))
+* **deps:** update plugin com.gradle.enterprise to v3.14.1 ([4f90c9c](https://github.com/nicolasfara/conventional-commits/commit/4f90c9cbb5c84bed0ad512613f49d20d4354b983))
+* **deps:** update plugin conventional-commits to v3.1.1 ([3c5a45c](https://github.com/nicolasfara/conventional-commits/commit/3c5a45c06027dd2845d2e56c0bc6e69971883b9d))
+* **deps:** update plugin gitsemver to v1.1.10 ([a00f47b](https://github.com/nicolasfara/conventional-commits/commit/a00f47b82fb362a92cf4f4a0e343a5e176d4e442))
+* **deps:** update plugin publish to v1.2.1 ([7fc9b2e](https://github.com/nicolasfara/conventional-commits/commit/7fc9b2eae2fffd3dde6bbc4b3783d771f6466676))
+
 ## [3.1.1](https://github.com/nicolasfara/conventional-commits/compare/3.1.0...3.1.1) (2023-04-27)
 
 
