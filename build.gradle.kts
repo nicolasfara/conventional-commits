@@ -3,7 +3,6 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jetbrains.kotlin.config.KotlinCompilerVersion.VERSION as KOTLIN_VERSION
 
-@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     `java-gradle-plugin`
     alias(libs.plugins.kotlin.jvm)
@@ -43,6 +42,7 @@ dependencies {
     api(gradleKotlinDsl())
     testImplementation(gradleTestKit())
     testImplementation(libs.bundles.kotest)
+    implementation(libs.mordant)
 }
 
 tasks.withType<KotlinCompile> {
@@ -123,5 +123,5 @@ publishOnCentral {
 }
 
 detekt {
-    config = files("./detekt.yml")
+    config.setFrom("${rootDir.absolutePath}/detekt.yml")
 }

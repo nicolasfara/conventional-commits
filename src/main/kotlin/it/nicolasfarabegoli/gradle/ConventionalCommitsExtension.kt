@@ -1,5 +1,6 @@
 package it.nicolasfarabegoli.gradle
 
+import com.github.ajalt.mordant.rendering.TextColors
 import org.gradle.api.Project
 
 /**
@@ -41,13 +42,13 @@ open class ConventionalCommitsExtension(private val project: Project) {
     /**
      * The message that will be shown if the commit is conventional commit compliant.
      */
-    var successMessage: String? = "\\e[32mCommit message meets Conventional Commit standards...\\e[0m"
+    var successMessage: String? = TextColors.green("Commit message meets Conventional Commit standards...")
 
     /**
      * The message that will be shown if the commit is not conventional commit compliant.
      */
     var failureMessage: String? = """
-        \e[31mThe commit message does not meet the Conventional Commit standard\e[0m
+        ${TextColors.red("The commit message does not meet the Conventional Commit standard")}
         An example of a valid message is: 
           feat(login): add the 'remember me' button
         More details at: https://www.conventionalcommits.org/en/v1.0.0/#summary
