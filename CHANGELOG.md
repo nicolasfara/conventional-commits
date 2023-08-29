@@ -1,3 +1,25 @@
+## [3.1.3](https://github.com/nicolasfara/conventional-commits/compare/3.1.2...3.1.3) (2023-08-29)
+
+
+### Bug Fixes
+
+* remove apostrophe from example message ([17458b2](https://github.com/nicolasfara/conventional-commits/commit/17458b2df457e27f528f09a0e79ad223f247332e))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.6.0 ([1b6c970](https://github.com/nicolasfara/conventional-commits/commit/1b6c970e4d6292887020932b2004783f724a94b0))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.44 ([c278984](https://github.com/nicolasfara/conventional-commits/commit/c278984f81f17122d53e6b9aaf9f48ce7d849827))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.46 ([c5cfe4b](https://github.com/nicolasfara/conventional-commits/commit/c5cfe4b4ee16504a92821744c78993657c642ff3))
+* **deps:** update kotlin and detekt ([1341b02](https://github.com/nicolasfara/conventional-commits/commit/1341b028bb3a1e7d0ddb5b58b0d8503cf4a2e4d4))
+* **deps:** update plugin conventional-commits to v3.1.2 ([48cbb93](https://github.com/nicolasfara/conventional-commits/commit/48cbb931918301e06f54b7ec0bc412fb574a0fd6))
+* **deps:** update plugin publishoncentral to v5.0.11 ([dc9eaaf](https://github.com/nicolasfara/conventional-commits/commit/dc9eaafbee6adbb9131feb01b8ac28bbc9b49b70))
+* **deps:** update plugin publishoncentral to v5.0.8 ([349088f](https://github.com/nicolasfara/conventional-commits/commit/349088fcdf4823cb182da44fe00117a5df0bb48d))
+
 ## [3.1.2](https://github.com/nicolasfara/conventional-commits/compare/3.1.1...3.1.2) (2023-08-25)
 
 
