@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: DanySK/build-check-deploy-gradle-action@2.2.8
+      - uses: DanySK/build-check-deploy-gradle-action@2.2.9
         with:
           # Dry-deployment
           check-command: ./gradlew build --parallel
@@ -63,7 +63,7 @@ jobs:
         uses: actions/setup-node@v3.8.1
         with:
           node-version: ${{ steps.node-version.outputs.version }}
-      - uses: DanySK/build-check-deploy-gradle-action@2.2.8
+      - uses: DanySK/build-check-deploy-gradle-action@2.2.9
         with:
           build-command: true
           check-command: true
