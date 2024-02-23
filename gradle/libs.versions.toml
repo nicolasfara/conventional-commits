@@ -3,7 +3,7 @@ dokka = "1.9.10"
 kotlin = "1.9.22"
 kotest = "5.8.0"
 ktlint = "11.6.1"
-detekt = "1.23.1"
+detekt = "1.23.5"
 
 [libraries]
 kotest-junit = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
