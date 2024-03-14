@@ -8,7 +8,7 @@ detekt = "1.23.5"
 [libraries]
 kotest-junit = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-jvm = { module = "io.kotest:kotest-assertions-core-jvm", version.ref = "kotest" }
-mordant = { module = "com.github.ajalt.mordant:mordant", version = "2.3.0" }
+mordant = { module = "com.github.ajalt.mordant:mordant", version = "2.4.0" }
 
 [bundles]
 kotest = ["kotest-junit", "kotest-assertions-jvm"]
