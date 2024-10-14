@@ -36,7 +36,7 @@ private fun createCommitMessage(
     ignoreMessageCommit: String
 ): String {
     val typesRegex = types.joinToString("|")
-    val scopesRegex = if (scopes.isEmpty()) "[a-z \\-]+" else scopes.joinToString("|")
+    val scopesRegex = if (scopes.isEmpty()) "[a-z \\-_]+" else scopes.joinToString("|")
     val successMessageEcho = wrapInEcho(successMessage)
     val failureMessageEcho = wrapInEcho(failureMessage)
     return """
