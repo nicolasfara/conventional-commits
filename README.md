@@ -47,10 +47,10 @@ conventionalCommits {
 
 The following table describe all the available keys in the plugin
 
-| Key                  | Description                                                                                                | Default                                                                                      |
-|----------------------|------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| `warningIfNoGitRoot` | A **warning** is raised if no `.git` root is found walking up until the `/` from the project folder.       | `true`                                                                                       |
-| `types`              | List of admitted types in the commit message.                                                              | `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test` |
-| `scopes`             | List of admitted scopes in the commit message. An empty list means that all scopes are admitted            | `emptyList`                                                                                  |
-| `successMessage`     | A message printed if the commit meets conventional commit. If `null` is set, no message is printed.        | "Commit message meets Conventional Commit standards..."                                      |
-| `failureMessage`     | A message printed if the commit **not** meets conventional commit. If `null` is set no message is printed. | "The commit message does not meet the Conventional Commit standard"                          |
+| Key                  | Description                                                                                                                   | Default                                                                                      |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| `warningIfNoGitRoot` | A **warning** is raised if no `.git` root is found walking up until the `/` from the project folder.                          | `true`                                                                                       |
+| `types`              | List of admitted types in the commit message.                                                                                 | `build`, `chore`, `ci`, `docs`, `feat`, `fix`, `perf`, `refactor`, `revert`, `style`, `test` |
+| `scopes`             | List of admitted scopes in the commit message in the form of (bash) regexes. An empty list is equal to `listOf("[a-z \-]+")`. | `listOf("[a-z \-]+")`                                                                        |
+| `successMessage`     | A message printed if the commit meets conventional commit. If `null` is set, no message is printed.                           | "Commit message meets Conventional Commit standards..."                                      |
+| `failureMessage`     | A message printed if the commit **not** meets conventional commit. If `null` is set no message is printed.                    | "The commit message does not meet the Conventional Commit standard"                          |
