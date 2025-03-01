@@ -2,7 +2,7 @@
 dokka = "1.9.20"
 kotlin = "2.1.0"
 kotest = "5.9.1"
-ktlint = "12.1.1"
+ktlint = "12.1.2"
 detekt = "1.23.7"
 
 [libraries]
